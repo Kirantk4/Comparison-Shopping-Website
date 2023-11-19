@@ -1,2 +1,0 @@
-INSERT INTO deliveries (customer_id, ordered_date, delivery_date) VALUES (1, '2020-01-01', '2020-01-02');
-INSERT INTO delivery_contents (delivery_id, product_id, quantity, price) VALUES (1, 1, 1, 100);
