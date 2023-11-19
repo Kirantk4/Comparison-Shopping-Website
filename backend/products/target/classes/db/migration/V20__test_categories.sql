@@ -1,0 +1,17 @@
+INSERT INTO categories (category_name) VALUES ('Meat & Seafood');
+INSERT INTO categories (category_name) VALUES ('Fruit & Vegetables');
+INSERT INTO categories (category_name) VALUES ('Dairy, Eggs & Cheese');
+INSERT INTO categories (category_name) VALUES ('Bakery');
+INSERT INTO categories (category_name) VALUES ('Pantry');
+INSERT INTO categories (category_name) VALUES ('Drinks');
+INSERT INTO categories (category_name) VALUES ('Health & Beauty');
+INSERT INTO categories (category_name, parent_category_id) VALUES ('Milk', 3);
+INSERT INTO categories (category_name, parent_category_id) VALUES ('Cheese', 3);
+INSERT INTO categories (category_name, parent_category_id) VALUES ('Eggs', 3);
+INSERT INTO categories (category_name, parent_category_id) VALUES ('Lamb', 1);
+INSERT INTO categories (category_name, parent_category_id) VALUES ('Chicken', 1);
+INSERT INTO categories (category_name, parent_category_id) VALUES ('Fish', 1);
+INSERT INTO categories (category_name, parent_category_id) VALUES ('Beef', 1);
+INSERT INTO categories (category_name, parent_category_id) VALUES ('Pork', 1);
+INSERT INTO categories (category_name, parent_category_id) VALUES ('Fruit', 2);
+INSERT INTO categories (category_name, parent_category_id) VALUES ('Vegetables', 2);

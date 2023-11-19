@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="au.edu.rmit.sept.supermarkets.products.Repositories.ProductRepositoryImplTest" time="2.498" tests="14" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="20"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/Kiran/github-classroom/SEPT/team-project-group-p03-08/backend/products/target/test-classes:/Users/Kiran/github-classroom/SEPT/team-project-group-p03-08/backend/products/target/classes:/Users/Kiran/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.1.2/spring-boot-starter-web-3.1.2.jar:/Users/Kiran/.m2/repository/org/springframework/boot/spring-boot-starter/3.1.2/spring-boot-starter-3.1.2.jar:/Users/Kiran/.m2/repository/org/springframework/boot/spring-boot/3.1.2/spring-boot-3.1.2.jar:/Users/Kiran/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.1.2/spring-boot-autoconfigure-3.1.2.jar:/Users/Kiran/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.1.2/spring-boot-starter-logging-3.1.2.jar:/Users/Kiran/.m2/repository/ch/qos/logback/logback-classic/1.4.8/logback-classic-1.4.8.jar:/Users/Kiran/.m2/repository/ch/qos/logback/logback-core/1.4.8/logback-core-1.4.8.jar:/Users/Kiran/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.20.0/log4j-to-slf4j-2.20.0.jar:/Users/Kiran/.m2/repository/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar:/Users/Kiran/.m2/repository/org/slf4j/jul-to-slf4j/2.0.7/jul-to-slf4j-2.0.7.jar:/Users/Kiran/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/Kiran/.m2/repository/org/yaml/snakeyaml/1.33/snakeyaml-1.33.jar:/Users/Kiran/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.1.2/spring-boot-starter-json-3.1.2.jar:/Users/Kiran/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar:/Users/Kiran/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar:/Users/Kiran/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.2/jackson-datatype-jdk8-2.15.2.jar:/Users/Kiran/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.2/jackson-datatype-jsr310-2.15.2.jar:/Users/Kiran/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.2/jackson-module-parameter-names-2.15.2.jar:/Users/Kiran/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.1.2/spring-boot-starter-tomcat-3.1.2.jar:/Users/Kiran/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.11/tomcat-embed-core-10.1.11.jar:/Users/Kiran/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.11/tomcat-embed-el-10.1.11.jar:/Users/Kiran/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.11/tomcat-embed-websocket-10.1.11.jar:/Users/Kiran/.m2/repository/org/springframework/spring-web/6.0.11/spring-web-6.0.11.jar:/Users/Kiran/.m2/repository/org/springframework/spring-beans/6.0.11/spring-beans-6.0.11.jar:/Users/Kiran/.m2/repository/io/micrometer/micrometer-observation/1.11.2/micrometer-observation-1.11.2.jar:/Users/Kiran/.m2/repository/io/micrometer/micrometer-commons/1.11.2/micrometer-commons-1.11.2.jar:/Users/Kiran/.m2/repository/org/springframework/spring-webmvc/6.0.11/spring-webmvc-6.0.11.jar:/Users/Kiran/.m2/repository/org/springframework/spring-aop/6.0.11/spring-aop-6.0.11.jar:/Users/Kiran/.m2/repository/org/springframework/spring-context/6.0.11/spring-context-6.0.11.jar:/Users/Kiran/.m2/repository/org/springframework/spring-expression/6.0.11/spring-expression-6.0.11.jar:/Users/Kiran/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.1.2/spring-boot-starter-test-3.1.2.jar:/Users/Kiran/.m2/repository/org/springframework/boot/spring-boot-test/3.1.2/spring-boot-test-3.1.2.jar:/Users/Kiran/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.1.2/spring-boot-test-autoconfigure-3.1.2.jar:/Users/Kiran/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/Users/Kiran/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/Users/Kiran/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.0/jakarta.xml.bind-api-4.0.0.jar:/Users/Kiran/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/Users/Kiran/.m2/repository/net/minidev/json-smart/2.4.11/json-smart-2.4.11.jar:/Users/Kiran/.m2/repository/net/minidev/accessors-smart/2.4.11/accessors-smart-2.4.11.jar:/Users/Kiran/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/Kiran/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/Kiran/.m2/repository/net/bytebuddy/byte-buddy/1.14.5/byte-buddy-1.14.5.jar:/Users/Kiran/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/Kiran/.m2/repository/org/junit/jupiter/junit-jupiter/5.9.3/junit-jupiter-5.9.3.jar:/Users/Kiran/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.3/junit-jupiter-api-5.9.3.jar:/Users/Kiran/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/Kiran/.m2/repository/org/junit/platform/junit-platform-commons/1.9.3/junit-platform-commons-1.9.3.jar:/Users/Kiran/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/Kiran/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.3/junit-jupiter-params-5.9.3.jar:/Users/Kiran/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.3/junit-jupiter-engine-5.9.3.jar:/Users/Kiran/.m2/repository/org/junit/platform/junit-platform-engine/1.9.3/junit-platform-engine-1.9.3.jar:/Users/Kiran/.m2/repository/org/mockito/mockito-core/5.3.1/mockito-core-5.3.1.jar:/Users/Kiran/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.5/byte-buddy-agent-1.14.5.jar:/Users/Kiran/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/Kiran/.m2/repository/org/mockito/mockito-junit-jupiter/5.3.1/mockito-junit-jupiter-5.3.1.jar:/Users/Kiran/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/Kiran/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/Kiran/.m2/repository/org/springframework/spring-core/6.0.11/spring-core-6.0.11.jar:/Users/Kiran/.m2/repository/org/springframework/spring-jcl/6.0.11/spring-jcl-6.0.11.jar:/Users/Kiran/.m2/repository/org/springframework/spring-test/6.0.11/spring-test-6.0.11.jar:/Users/Kiran/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/Kiran/.m2/repository/com/h2database/h2/2.1.214/h2-2.1.214.jar:/Users/Kiran/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.1.2/spring-boot-starter-jdbc-3.1.2.jar:/Users/Kiran/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/Kiran/.m2/repository/org/springframework/spring-jdbc/6.0.11/spring-jdbc-6.0.11.jar:/Users/Kiran/.m2/repository/org/springframework/spring-tx/6.0.11/spring-tx-6.0.11.jar:/Users/Kiran/.m2/repository/org/flywaydb/flyway-maven-plugin/9.21.0/flyway-maven-plugin-9.21.0.jar:/Users/Kiran/.m2/repository/org/flywaydb/flyway-core/9.16.3/flyway-core-9.16.3.jar:/Users/Kiran/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-toml/2.15.2/jackson-dataformat-toml-2.15.2.jar:/Users/Kiran/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar:/Users/Kiran/.m2/repository/org/apache/commons/commons-text/1.10.0/commons-text-1.10.0.jar:/Users/Kiran/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:"/>
+    <property name="java.vm.vendor" value="Homebrew"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="user.timezone" value="Australia/Melbourne"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="20"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="AU"/>
+    <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/20.0.2/libexec/openjdk.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/Kiran/github-classroom/SEPT/team-project-group-p03-08/backend/products/target/surefire/surefirebooter-20230923112402397_3.jar /Users/Kiran/github-classroom/SEPT/team-project-group-p03-08/backend/products/target/surefire 2023-09-23T11-24-02_352-jvmRun1 surefire-20230923112402397_1tmp surefire_0-20230923112402397_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/Kiran/github-classroom/SEPT/team-project-group-p03-08/backend/products/target/test-classes:/Users/Kiran/github-classroom/SEPT/team-project-group-p03-08/backend/products/target/classes:/Users/Kiran/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.1.2/spring-boot-starter-web-3.1.2.jar:/Users/Kiran/.m2/repository/org/springframework/boot/spring-boot-starter/3.1.2/spring-boot-starter-3.1.2.jar:/Users/Kiran/.m2/repository/org/springframework/boot/spring-boot/3.1.2/spring-boot-3.1.2.jar:/Users/Kiran/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.1.2/spring-boot-autoconfigure-3.1.2.jar:/Users/Kiran/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.1.2/spring-boot-starter-logging-3.1.2.jar:/Users/Kiran/.m2/repository/ch/qos/logback/logback-classic/1.4.8/logback-classic-1.4.8.jar:/Users/Kiran/.m2/repository/ch/qos/logback/logback-core/1.4.8/logback-core-1.4.8.jar:/Users/Kiran/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.20.0/log4j-to-slf4j-2.20.0.jar:/Users/Kiran/.m2/repository/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar:/Users/Kiran/.m2/repository/org/slf4j/jul-to-slf4j/2.0.7/jul-to-slf4j-2.0.7.jar:/Users/Kiran/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/Kiran/.m2/repository/org/yaml/snakeyaml/1.33/snakeyaml-1.33.jar:/Users/Kiran/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.1.2/spring-boot-starter-json-3.1.2.jar:/Users/Kiran/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar:/Users/Kiran/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar:/Users/Kiran/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.2/jackson-datatype-jdk8-2.15.2.jar:/Users/Kiran/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.2/jackson-datatype-jsr310-2.15.2.jar:/Users/Kiran/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.2/jackson-module-parameter-names-2.15.2.jar:/Users/Kiran/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.1.2/spring-boot-starter-tomcat-3.1.2.jar:/Users/Kiran/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.11/tomcat-embed-core-10.1.11.jar:/Users/Kiran/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.11/tomcat-embed-el-10.1.11.jar:/Users/Kiran/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.11/tomcat-embed-websocket-10.1.11.jar:/Users/Kiran/.m2/repository/org/springframework/spring-web/6.0.11/spring-web-6.0.11.jar:/Users/Kiran/.m2/repository/org/springframework/spring-beans/6.0.11/spring-beans-6.0.11.jar:/Users/Kiran/.m2/repository/io/micrometer/micrometer-observation/1.11.2/micrometer-observation-1.11.2.jar:/Users/Kiran/.m2/repository/io/micrometer/micrometer-commons/1.11.2/micrometer-commons-1.11.2.jar:/Users/Kiran/.m2/repository/org/springframework/spring-webmvc/6.0.11/spring-webmvc-6.0.11.jar:/Users/Kiran/.m2/repository/org/springframework/spring-aop/6.0.11/spring-aop-6.0.11.jar:/Users/Kiran/.m2/repository/org/springframework/spring-context/6.0.11/spring-context-6.0.11.jar:/Users/Kiran/.m2/repository/org/springframework/spring-expression/6.0.11/spring-expression-6.0.11.jar:/Users/Kiran/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.1.2/spring-boot-starter-test-3.1.2.jar:/Users/Kiran/.m2/repository/org/springframework/boot/spring-boot-test/3.1.2/spring-boot-test-3.1.2.jar:/Users/Kiran/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.1.2/spring-boot-test-autoconfigure-3.1.2.jar:/Users/Kiran/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/Users/Kiran/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/Users/Kiran/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.0/jakarta.xml.bind-api-4.0.0.jar:/Users/Kiran/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/Users/Kiran/.m2/repository/net/minidev/json-smart/2.4.11/json-smart-2.4.11.jar:/Users/Kiran/.m2/repository/net/minidev/accessors-smart/2.4.11/accessors-smart-2.4.11.jar:/Users/Kiran/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/Kiran/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/Kiran/.m2/repository/net/bytebuddy/byte-buddy/1.14.5/byte-buddy-1.14.5.jar:/Users/Kiran/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/Kiran/.m2/repository/org/junit/jupiter/junit-jupiter/5.9.3/junit-jupiter-5.9.3.jar:/Users/Kiran/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.3/junit-jupiter-api-5.9.3.jar:/Users/Kiran/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/Kiran/.m2/repository/org/junit/platform/junit-platform-commons/1.9.3/junit-platform-commons-1.9.3.jar:/Users/Kiran/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/Kiran/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.3/junit-jupiter-params-5.9.3.jar:/Users/Kiran/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.3/junit-jupiter-engine-5.9.3.jar:/Users/Kiran/.m2/repository/org/junit/platform/junit-platform-engine/1.9.3/junit-platform-engine-1.9.3.jar:/Users/Kiran/.m2/repository/org/mockito/mockito-core/5.3.1/mockito-core-5.3.1.jar:/Users/Kiran/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.5/byte-buddy-agent-1.14.5.jar:/Users/Kiran/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/Kiran/.m2/repository/org/mockito/mockito-junit-jupiter/5.3.1/mockito-junit-jupiter-5.3.1.jar:/Users/Kiran/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/Kiran/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/Kiran/.m2/repository/org/springframework/spring-core/6.0.11/spring-core-6.0.11.jar:/Users/Kiran/.m2/repository/org/springframework/spring-jcl/6.0.11/spring-jcl-6.0.11.jar:/Users/Kiran/.m2/repository/org/springframework/spring-test/6.0.11/spring-test-6.0.11.jar:/Users/Kiran/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/Kiran/.m2/repository/com/h2database/h2/2.1.214/h2-2.1.214.jar:/Users/Kiran/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.1.2/spring-boot-starter-jdbc-3.1.2.jar:/Users/Kiran/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/Kiran/.m2/repository/org/springframework/spring-jdbc/6.0.11/spring-jdbc-6.0.11.jar:/Users/Kiran/.m2/repository/org/springframework/spring-tx/6.0.11/spring-tx-6.0.11.jar:/Users/Kiran/.m2/repository/org/flywaydb/flyway-maven-plugin/9.21.0/flyway-maven-plugin-9.21.0.jar:/Users/Kiran/.m2/repository/org/flywaydb/flyway-core/9.16.3/flyway-core-9.16.3.jar:/Users/Kiran/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-toml/2.15.2/jackson-dataformat-toml-2.15.2.jar:/Users/Kiran/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar:/Users/Kiran/.m2/repository/org/apache/commons/commons-text/1.10.0/commons-text-1.10.0.jar:/Users/Kiran/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/Kiran"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-07-18"/>
+    <property name="java.home" value="/opt/homebrew/Cellar/openjdk/20.0.2/libexec/openjdk.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/Kiran/github-classroom/SEPT/team-project-group-p03-08/backend/products"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/Kiran/github-classroom/SEPT/team-project-group-p03-08/backend/products/target/surefire/surefirebooter-20230923112402397_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="20.0.2"/>
+    <property name="user.name" value="Kiran"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="13.5.2"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Homebrew"/>
+    <property name="localRepository" value="/Users/Kiran/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/1h/w37fd3kx607gmrk5h90t2q400000gn/T/"/>
+    <property name="com.zaxxer.hikari.pool_number" value="1"/>
+    <property name="java.version" value="20.0.2"/>
+    <property name="user.dir" value="/Users/Kiran/github-classroom/SEPT/team-project-group-p03-08/backend/products"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="593"/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/Kiran/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Homebrew"/>
+    <property name="java.vm.version" value="20.0.2"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="64.0"/>
+  </properties>
+  <testcase name="findItemPrice" classname="au.edu.rmit.sept.supermarkets.products.Repositories.ProductRepositoryImplTest" time="0.491">
+    <system-out><![CDATA[11:24:02.856 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [au.edu.rmit.sept.supermarkets.products.Repositories.ProductRepositoryImplTest]: ProductRepositoryImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:24:02.907 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration au.edu.rmit.sept.supermarkets.products.ProductsApplication for test class au.edu.rmit.sept.supermarkets.products.Repositories.ProductRepositoryImplTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.2)
+
+2023-09-23T11:24:03.085+10:00  INFO 593 --- [           main] a.e.r.s.s.p.R.ProductRepositoryImplTest  : Starting ProductRepositoryImplTest using Java 20.0.2 with PID 593 (started by Kiran in /Users/Kiran/github-classroom/SEPT/team-project-group-p03-08/backend/products)
+2023-09-23T11:24:03.085+10:00  INFO 593 --- [           main] a.e.r.s.s.p.R.ProductRepositoryImplTest  : No active profile set, falling back to 1 default profile: "default"
+2023-09-23T11:24:03.748+10:00  INFO 593 --- [           main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.16.3 by Redgate
+2023-09-23T11:24:03.749+10:00  INFO 593 --- [           main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2023-09-23T11:24:03.749+10:00  INFO 593 --- [           main] o.f.c.internal.license.VersionPrinter    : 
+2023-09-23T11:24:03.759+10:00  INFO 593 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-23T11:24:03.865+10:00  INFO 593 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:/tmp/testdb user=TESTUSER
+2023-09-23T11:24:03.866+10:00  INFO 593 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-23T11:24:03.871+10:00  INFO 593 --- [           main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:file:/tmp/testdb (H2 2.1)
+2023-09-23T11:24:03.915+10:00  INFO 593 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2023-09-23T11:24:03.917+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 22 migrations (execution time 00:00.013s)
+2023-09-23T11:24:03.920+10:00  INFO 593 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-09-23T11:24:03.931+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-09-23T11:24:03.934+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create customers"
+2023-09-23T11:24:03.942+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - create categories"
+2023-09-23T11:24:03.949+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "3 - create products"
+2023-09-23T11:24:03.953+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "4 - create notifications"
+2023-09-23T11:24:03.957+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "5 - create deliveries"
+2023-09-23T11:24:03.960+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "6 - create carts"
+2023-09-23T11:24:03.963+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "7 - create current prices"
+2023-09-23T11:24:03.967+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "8 - create cart contents"
+2023-09-23T11:24:03.971+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "9 - create delivery contents"
+2023-09-23T11:24:03.975+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "10 - create notifications associations"
+2023-09-23T11:24:03.979+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "11 - create price histories"
+2023-09-23T11:24:03.983+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "12 - insert customer"
+2023-09-23T11:24:03.987+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "13 - insert categories"
+2023-09-23T11:24:03.990+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "14 - insert product"
+2023-09-23T11:24:03.996+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "15 - insert delivery"
+2023-09-23T11:24:04.000+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "16 - insert cart"
+2023-09-23T11:24:04.003+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "17 - insert notification"
+2023-09-23T11:24:04.005+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "18 - insert cart contents"
+2023-09-23T11:24:04.007+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 18 migrations to schema "PUBLIC", now at version v18 (execution time 00:00.077s)
+2023-09-23T11:24:04.026+10:00  INFO 593 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:/tmp/testdb'
+2023-09-23T11:24:04.046+10:00  INFO 593 --- [           main] a.e.r.s.s.p.R.ProductRepositoryImplTest  : Started ProductRepositoryImplTest in 1.069 seconds (process running for 1.607)
+2023-09-23T11:24:04.529+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 22 migrations (execution time 00:00.006s)
+2023-09-23T11:24:04.530+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": 18
+2023-09-23T11:24:04.530+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
+2023-09-23T11:24:04.537+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully dropped pre-schema database level objects (execution time 00:00.000s)
+2023-09-23T11:24:04.542+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully cleaned schema "PUBLIC" (execution time 00:00.004s)
+2023-09-23T11:24:04.542+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully cleaned schema "PUBLIC" (execution time 00:00.000s)
+2023-09-23T11:24:04.542+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully dropped post-schema database level objects (execution time 00:00.000s)
+]]></system-out>
+  </testcase>
+  <testcase name="updateProduct" classname="au.edu.rmit.sept.supermarkets.products.Repositories.ProductRepositoryImplTest" time="0.08">
+    <system-out><![CDATA[2023-09-23T11:24:04.552+10:00  INFO 593 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2023-09-23T11:24:04.553+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 22 migrations (execution time 00:00.005s)
+2023-09-23T11:24:04.554+10:00  INFO 593 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-09-23T11:24:04.556+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-09-23T11:24:04.557+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create customers"
+2023-09-23T11:24:04.561+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - create categories"
+2023-09-23T11:24:04.563+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "3 - create products"
+2023-09-23T11:24:04.566+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "4 - create notifications"
+2023-09-23T11:24:04.569+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "5 - create deliveries"
+2023-09-23T11:24:04.575+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "6 - create carts"
+2023-09-23T11:24:04.581+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "7 - create current prices"
+2023-09-23T11:24:04.583+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "8 - create cart contents"
+2023-09-23T11:24:04.587+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "9 - create delivery contents"
+2023-09-23T11:24:04.589+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "10 - create notifications associations"
+2023-09-23T11:24:04.592+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "11 - create price histories"
+2023-09-23T11:24:04.595+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "12 - insert customer"
+2023-09-23T11:24:04.597+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "13 - insert categories"
+2023-09-23T11:24:04.598+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "14 - insert product"
+2023-09-23T11:24:04.601+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "15 - insert delivery"
+2023-09-23T11:24:04.603+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "16 - insert cart"
+2023-09-23T11:24:04.605+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "17 - insert notification"
+2023-09-23T11:24:04.606+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "18 - insert cart contents"
+2023-09-23T11:24:04.615+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 18 migrations to schema "PUBLIC", now at version v18 (execution time 00:00.060s)
+2023-09-23T11:24:04.620+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully dropped pre-schema database level objects (execution time 00:00.000s)
+2023-09-23T11:24:04.623+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully cleaned schema "PUBLIC" (execution time 00:00.002s)
+2023-09-23T11:24:04.624+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully cleaned schema "PUBLIC" (execution time 00:00.000s)
+2023-09-23T11:24:04.624+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully dropped post-schema database level objects (execution time 00:00.000s)
+]]></system-out>
+  </testcase>
+  <testcase name="findID" classname="au.edu.rmit.sept.supermarkets.products.Repositories.ProductRepositoryImplTest" time="0.09">
+    <system-out><![CDATA[2023-09-23T11:24:04.633+10:00  INFO 593 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2023-09-23T11:24:04.633+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 22 migrations (execution time 00:00.005s)
+2023-09-23T11:24:04.634+10:00  INFO 593 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-09-23T11:24:04.635+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-09-23T11:24:04.637+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create customers"
+2023-09-23T11:24:04.639+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - create categories"
+2023-09-23T11:24:04.642+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "3 - create products"
+2023-09-23T11:24:04.644+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "4 - create notifications"
+2023-09-23T11:24:04.647+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "5 - create deliveries"
+2023-09-23T11:24:04.654+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "6 - create carts"
+2023-09-23T11:24:04.657+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "7 - create current prices"
+2023-09-23T11:24:04.659+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "8 - create cart contents"
+2023-09-23T11:24:04.681+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "9 - create delivery contents"
+2023-09-23T11:24:04.684+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "10 - create notifications associations"
+2023-09-23T11:24:04.686+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "11 - create price histories"
+2023-09-23T11:24:04.689+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "12 - insert customer"
+2023-09-23T11:24:04.691+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "13 - insert categories"
+2023-09-23T11:24:04.699+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "14 - insert product"
+2023-09-23T11:24:04.702+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "15 - insert delivery"
+2023-09-23T11:24:04.703+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "16 - insert cart"
+2023-09-23T11:24:04.705+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "17 - insert notification"
+2023-09-23T11:24:04.707+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "18 - insert cart contents"
+2023-09-23T11:24:04.708+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 18 migrations to schema "PUBLIC", now at version v18 (execution time 00:00.072s)
+2023-09-23T11:24:04.711+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully dropped pre-schema database level objects (execution time 00:00.000s)
+2023-09-23T11:24:04.714+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully cleaned schema "PUBLIC" (execution time 00:00.002s)
+2023-09-23T11:24:04.714+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully cleaned schema "PUBLIC" (execution time 00:00.000s)
+2023-09-23T11:24:04.714+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully dropped post-schema database level objects (execution time 00:00.000s)
+]]></system-out>
+  </testcase>
+  <testcase name="insertProduct" classname="au.edu.rmit.sept.supermarkets.products.Repositories.ProductRepositoryImplTest" time="0.054">
+    <system-out><![CDATA[2023-09-23T11:24:04.722+10:00  INFO 593 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2023-09-23T11:24:04.722+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 22 migrations (execution time 00:00.004s)
+2023-09-23T11:24:04.723+10:00  INFO 593 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-09-23T11:24:04.724+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-09-23T11:24:04.725+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create customers"
+2023-09-23T11:24:04.729+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - create categories"
+2023-09-23T11:24:04.732+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "3 - create products"
+2023-09-23T11:24:04.734+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "4 - create notifications"
+2023-09-23T11:24:04.736+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "5 - create deliveries"
+2023-09-23T11:24:04.739+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "6 - create carts"
+2023-09-23T11:24:04.741+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "7 - create current prices"
+2023-09-23T11:24:04.743+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "8 - create cart contents"
+2023-09-23T11:24:04.745+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "9 - create delivery contents"
+2023-09-23T11:24:04.748+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "10 - create notifications associations"
+2023-09-23T11:24:04.750+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "11 - create price histories"
+2023-09-23T11:24:04.752+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "12 - insert customer"
+2023-09-23T11:24:04.754+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "13 - insert categories"
+2023-09-23T11:24:04.756+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "14 - insert product"
+2023-09-23T11:24:04.758+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "15 - insert delivery"
+2023-09-23T11:24:04.759+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "16 - insert cart"
+2023-09-23T11:24:04.761+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "17 - insert notification"
+2023-09-23T11:24:04.762+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "18 - insert cart contents"
+2023-09-23T11:24:04.763+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 18 migrations to schema "PUBLIC", now at version v18 (execution time 00:00.039s)
+2023-09-23T11:24:04.766+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully dropped pre-schema database level objects (execution time 00:00.000s)
+2023-09-23T11:24:04.768+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully cleaned schema "PUBLIC" (execution time 00:00.002s)
+2023-09-23T11:24:04.769+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully cleaned schema "PUBLIC" (execution time 00:00.000s)
+2023-09-23T11:24:04.769+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully dropped post-schema database level objects (execution time 00:00.000s)
+]]></system-out>
+  </testcase>
+  <testcase name="search_all_params" classname="au.edu.rmit.sept.supermarkets.products.Repositories.ProductRepositoryImplTest" time="0.078">
+    <system-out><![CDATA[2023-09-23T11:24:04.775+10:00  INFO 593 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2023-09-23T11:24:04.775+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 22 migrations (execution time 00:00.003s)
+2023-09-23T11:24:04.776+10:00  INFO 593 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-09-23T11:24:04.786+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-09-23T11:24:04.787+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create customers"
+2023-09-23T11:24:04.789+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - create categories"
+2023-09-23T11:24:04.795+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "3 - create products"
+2023-09-23T11:24:04.797+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "4 - create notifications"
+2023-09-23T11:24:04.800+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "5 - create deliveries"
+2023-09-23T11:24:04.801+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "6 - create carts"
+2023-09-23T11:24:04.803+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "7 - create current prices"
+2023-09-23T11:24:04.805+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "8 - create cart contents"
+2023-09-23T11:24:04.808+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "9 - create delivery contents"
+2023-09-23T11:24:04.809+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "10 - create notifications associations"
+2023-09-23T11:24:04.812+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "11 - create price histories"
+2023-09-23T11:24:04.814+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "12 - insert customer"
+2023-09-23T11:24:04.815+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "13 - insert categories"
+2023-09-23T11:24:04.816+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "14 - insert product"
+2023-09-23T11:24:04.818+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "15 - insert delivery"
+2023-09-23T11:24:04.819+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "16 - insert cart"
+2023-09-23T11:24:04.835+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "17 - insert notification"
+2023-09-23T11:24:04.837+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "18 - insert cart contents"
+2023-09-23T11:24:04.838+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 18 migrations to schema "PUBLIC", now at version v18 (execution time 00:00.052s)
+2023-09-23T11:24:04.844+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully dropped pre-schema database level objects (execution time 00:00.000s)
+2023-09-23T11:24:04.846+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully cleaned schema "PUBLIC" (execution time 00:00.001s)
+2023-09-23T11:24:04.846+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully cleaned schema "PUBLIC" (execution time 00:00.000s)
+2023-09-23T11:24:04.846+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully dropped post-schema database level objects (execution time 00:00.000s)
+]]></system-out>
+  </testcase>
+  <testcase name="failDeleteProduct" classname="au.edu.rmit.sept.supermarkets.products.Repositories.ProductRepositoryImplTest" time="0.047">
+    <system-out><![CDATA[2023-09-23T11:24:04.855+10:00  INFO 593 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2023-09-23T11:24:04.855+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 22 migrations (execution time 00:00.005s)
+2023-09-23T11:24:04.856+10:00  INFO 593 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-09-23T11:24:04.857+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-09-23T11:24:04.858+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create customers"
+2023-09-23T11:24:04.859+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - create categories"
+2023-09-23T11:24:04.861+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "3 - create products"
+2023-09-23T11:24:04.863+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "4 - create notifications"
+2023-09-23T11:24:04.865+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "5 - create deliveries"
+2023-09-23T11:24:04.871+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "6 - create carts"
+2023-09-23T11:24:04.873+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "7 - create current prices"
+2023-09-23T11:24:04.875+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "8 - create cart contents"
+2023-09-23T11:24:04.877+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "9 - create delivery contents"
+2023-09-23T11:24:04.878+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "10 - create notifications associations"
+2023-09-23T11:24:04.880+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "11 - create price histories"
+2023-09-23T11:24:04.882+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "12 - insert customer"
+2023-09-23T11:24:04.883+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "13 - insert categories"
+2023-09-23T11:24:04.884+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "14 - insert product"
+2023-09-23T11:24:04.886+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "15 - insert delivery"
+2023-09-23T11:24:04.887+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "16 - insert cart"
+2023-09-23T11:24:04.888+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "17 - insert notification"
+2023-09-23T11:24:04.889+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "18 - insert cart contents"
+2023-09-23T11:24:04.890+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 18 migrations to schema "PUBLIC", now at version v18 (execution time 00:00.032s)
+2023-09-23T11:24:04.892+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully dropped pre-schema database level objects (execution time 00:00.000s)
+2023-09-23T11:24:04.895+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully cleaned schema "PUBLIC" (execution time 00:00.002s)
+2023-09-23T11:24:04.895+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully cleaned schema "PUBLIC" (execution time 00:00.000s)
+2023-09-23T11:24:04.895+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully dropped post-schema database level objects (execution time 00:00.000s)
+]]></system-out>
+  </testcase>
+  <testcase name="search_name" classname="au.edu.rmit.sept.supermarkets.products.Repositories.ProductRepositoryImplTest" time="0.041">
+    <system-out><![CDATA[2023-09-23T11:24:04.902+10:00  INFO 593 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2023-09-23T11:24:04.902+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 22 migrations (execution time 00:00.004s)
+2023-09-23T11:24:04.903+10:00  INFO 593 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-09-23T11:24:04.904+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-09-23T11:24:04.905+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create customers"
+2023-09-23T11:24:04.906+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - create categories"
+2023-09-23T11:24:04.908+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "3 - create products"
+2023-09-23T11:24:04.910+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "4 - create notifications"
+2023-09-23T11:24:04.912+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "5 - create deliveries"
+2023-09-23T11:24:04.913+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "6 - create carts"
+2023-09-23T11:24:04.915+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "7 - create current prices"
+2023-09-23T11:24:04.917+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "8 - create cart contents"
+2023-09-23T11:24:04.918+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "9 - create delivery contents"
+2023-09-23T11:24:04.920+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "10 - create notifications associations"
+2023-09-23T11:24:04.922+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "11 - create price histories"
+2023-09-23T11:24:04.924+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "12 - insert customer"
+2023-09-23T11:24:04.926+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "13 - insert categories"
+2023-09-23T11:24:04.927+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "14 - insert product"
+2023-09-23T11:24:04.928+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "15 - insert delivery"
+2023-09-23T11:24:04.930+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "16 - insert cart"
+2023-09-23T11:24:04.931+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "17 - insert notification"
+2023-09-23T11:24:04.932+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "18 - insert cart contents"
+2023-09-23T11:24:04.933+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 18 migrations to schema "PUBLIC", now at version v18 (execution time 00:00.029s)
+2023-09-23T11:24:04.935+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully dropped pre-schema database level objects (execution time 00:00.000s)
+2023-09-23T11:24:04.937+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully cleaned schema "PUBLIC" (execution time 00:00.001s)
+2023-09-23T11:24:04.937+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully cleaned schema "PUBLIC" (execution time 00:00.000s)
+2023-09-23T11:24:04.937+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully dropped post-schema database level objects (execution time 00:00.000s)
+]]></system-out>
+  </testcase>
+  <testcase name="deleteProduct" classname="au.edu.rmit.sept.supermarkets.products.Repositories.ProductRepositoryImplTest" time="0.074">
+    <system-out><![CDATA[2023-09-23T11:24:04.943+10:00  INFO 593 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2023-09-23T11:24:04.944+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 22 migrations (execution time 00:00.003s)
+2023-09-23T11:24:04.944+10:00  INFO 593 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-09-23T11:24:04.945+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-09-23T11:24:04.946+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create customers"
+2023-09-23T11:24:04.947+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - create categories"
+2023-09-23T11:24:04.949+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "3 - create products"
+2023-09-23T11:24:04.950+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "4 - create notifications"
+2023-09-23T11:24:04.952+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "5 - create deliveries"
+2023-09-23T11:24:04.953+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "6 - create carts"
+2023-09-23T11:24:04.955+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "7 - create current prices"
+2023-09-23T11:24:04.984+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "8 - create cart contents"
+2023-09-23T11:24:04.986+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "9 - create delivery contents"
+2023-09-23T11:24:04.988+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "10 - create notifications associations"
+2023-09-23T11:24:04.990+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "11 - create price histories"
+2023-09-23T11:24:04.992+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "12 - insert customer"
+2023-09-23T11:24:04.993+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "13 - insert categories"
+2023-09-23T11:24:04.996+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "14 - insert product"
+2023-09-23T11:24:04.997+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "15 - insert delivery"
+2023-09-23T11:24:04.998+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "16 - insert cart"
+2023-09-23T11:24:04.999+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "17 - insert notification"
+2023-09-23T11:24:05.000+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "18 - insert cart contents"
+2023-09-23T11:24:05.005+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 18 migrations to schema "PUBLIC", now at version v18 (execution time 00:00.055s)
+2023-09-23T11:24:05.008+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully dropped pre-schema database level objects (execution time 00:00.000s)
+2023-09-23T11:24:05.011+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully cleaned schema "PUBLIC" (execution time 00:00.002s)
+2023-09-23T11:24:05.011+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully cleaned schema "PUBLIC" (execution time 00:00.000s)
+2023-09-23T11:24:05.011+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully dropped post-schema database level objects (execution time 00:00.000s)
+]]></system-out>
+  </testcase>
+  <testcase name="ReturnsWhenAvailable" classname="au.edu.rmit.sept.supermarkets.products.Repositories.ProductRepositoryImplTest" time="0.039">
+    <system-out><![CDATA[2023-09-23T11:24:05.017+10:00  INFO 593 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2023-09-23T11:24:05.018+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 22 migrations (execution time 00:00.003s)
+2023-09-23T11:24:05.018+10:00  INFO 593 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-09-23T11:24:05.019+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-09-23T11:24:05.020+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create customers"
+2023-09-23T11:24:05.021+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - create categories"
+2023-09-23T11:24:05.023+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "3 - create products"
+2023-09-23T11:24:05.025+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "4 - create notifications"
+2023-09-23T11:24:05.027+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "5 - create deliveries"
+2023-09-23T11:24:05.028+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "6 - create carts"
+2023-09-23T11:24:05.029+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "7 - create current prices"
+2023-09-23T11:24:05.031+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "8 - create cart contents"
+2023-09-23T11:24:05.033+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "9 - create delivery contents"
+2023-09-23T11:24:05.034+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "10 - create notifications associations"
+2023-09-23T11:24:05.036+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "11 - create price histories"
+2023-09-23T11:24:05.038+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "12 - insert customer"
+2023-09-23T11:24:05.039+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "13 - insert categories"
+2023-09-23T11:24:05.040+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "14 - insert product"
+2023-09-23T11:24:05.041+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "15 - insert delivery"
+2023-09-23T11:24:05.043+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "16 - insert cart"
+2023-09-23T11:24:05.045+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "17 - insert notification"
+2023-09-23T11:24:05.046+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "18 - insert cart contents"
+2023-09-23T11:24:05.046+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 18 migrations to schema "PUBLIC", now at version v18 (execution time 00:00.027s)
+2023-09-23T11:24:05.049+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully dropped pre-schema database level objects (execution time 00:00.000s)
+2023-09-23T11:24:05.050+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully cleaned schema "PUBLIC" (execution time 00:00.001s)
+2023-09-23T11:24:05.050+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully cleaned schema "PUBLIC" (execution time 00:00.000s)
+2023-09-23T11:24:05.050+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully dropped post-schema database level objects (execution time 00:00.000s)
+]]></system-out>
+  </testcase>
+  <testcase name="search_priceLower_priceUpper" classname="au.edu.rmit.sept.supermarkets.products.Repositories.ProductRepositoryImplTest" time="0.062">
+    <system-out><![CDATA[2023-09-23T11:24:05.057+10:00  INFO 593 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2023-09-23T11:24:05.057+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 22 migrations (execution time 00:00.003s)
+2023-09-23T11:24:05.057+10:00  INFO 593 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-09-23T11:24:05.081+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-09-23T11:24:05.082+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create customers"
+2023-09-23T11:24:05.083+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - create categories"
+2023-09-23T11:24:05.088+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "3 - create products"
+2023-09-23T11:24:05.090+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "4 - create notifications"
+2023-09-23T11:24:05.091+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "5 - create deliveries"
+2023-09-23T11:24:05.092+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "6 - create carts"
+2023-09-23T11:24:05.093+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "7 - create current prices"
+2023-09-23T11:24:05.094+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "8 - create cart contents"
+2023-09-23T11:24:05.096+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "9 - create delivery contents"
+2023-09-23T11:24:05.097+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "10 - create notifications associations"
+2023-09-23T11:24:05.101+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "11 - create price histories"
+2023-09-23T11:24:05.102+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "12 - insert customer"
+2023-09-23T11:24:05.103+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "13 - insert categories"
+2023-09-23T11:24:05.104+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "14 - insert product"
+2023-09-23T11:24:05.106+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "15 - insert delivery"
+2023-09-23T11:24:05.107+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "16 - insert cart"
+2023-09-23T11:24:05.108+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "17 - insert notification"
+2023-09-23T11:24:05.109+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "18 - insert cart contents"
+2023-09-23T11:24:05.109+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 18 migrations to schema "PUBLIC", now at version v18 (execution time 00:00.028s)
+2023-09-23T11:24:05.111+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully dropped pre-schema database level objects (execution time 00:00.000s)
+2023-09-23T11:24:05.112+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully cleaned schema "PUBLIC" (execution time 00:00.000s)
+2023-09-23T11:24:05.112+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully cleaned schema "PUBLIC" (execution time 00:00.000s)
+2023-09-23T11:24:05.113+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully dropped post-schema database level objects (execution time 00:00.000s)
+]]></system-out>
+  </testcase>
+  <testcase name="search_priceLower" classname="au.edu.rmit.sept.supermarkets.products.Repositories.ProductRepositoryImplTest" time="0.041">
+    <system-out><![CDATA[2023-09-23T11:24:05.119+10:00  INFO 593 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2023-09-23T11:24:05.119+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 22 migrations (execution time 00:00.004s)
+2023-09-23T11:24:05.120+10:00  INFO 593 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-09-23T11:24:05.121+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-09-23T11:24:05.122+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create customers"
+2023-09-23T11:24:05.123+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - create categories"
+2023-09-23T11:24:05.125+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "3 - create products"
+2023-09-23T11:24:05.126+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "4 - create notifications"
+2023-09-23T11:24:05.128+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "5 - create deliveries"
+2023-09-23T11:24:05.129+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "6 - create carts"
+2023-09-23T11:24:05.131+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "7 - create current prices"
+2023-09-23T11:24:05.133+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "8 - create cart contents"
+2023-09-23T11:24:05.134+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "9 - create delivery contents"
+2023-09-23T11:24:05.136+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "10 - create notifications associations"
+2023-09-23T11:24:05.138+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "11 - create price histories"
+2023-09-23T11:24:05.141+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "12 - insert customer"
+2023-09-23T11:24:05.142+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "13 - insert categories"
+2023-09-23T11:24:05.143+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "14 - insert product"
+2023-09-23T11:24:05.144+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "15 - insert delivery"
+2023-09-23T11:24:05.145+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "16 - insert cart"
+2023-09-23T11:24:05.146+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "17 - insert notification"
+2023-09-23T11:24:05.149+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "18 - insert cart contents"
+2023-09-23T11:24:05.150+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 18 migrations to schema "PUBLIC", now at version v18 (execution time 00:00.029s)
+2023-09-23T11:24:05.153+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully dropped pre-schema database level objects (execution time 00:00.000s)
+2023-09-23T11:24:05.154+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully cleaned schema "PUBLIC" (execution time 00:00.001s)
+2023-09-23T11:24:05.154+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully cleaned schema "PUBLIC" (execution time 00:00.000s)
+2023-09-23T11:24:05.154+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully dropped post-schema database level objects (execution time 00:00.000s)
+]]></system-out>
+  </testcase>
+  <testcase name="search_category" classname="au.edu.rmit.sept.supermarkets.products.Repositories.ProductRepositoryImplTest" time="0.036">
+    <system-out><![CDATA[2023-09-23T11:24:05.161+10:00  INFO 593 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2023-09-23T11:24:05.161+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 22 migrations (execution time 00:00.003s)
+2023-09-23T11:24:05.161+10:00  INFO 593 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-09-23T11:24:05.162+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-09-23T11:24:05.163+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create customers"
+2023-09-23T11:24:05.165+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - create categories"
+2023-09-23T11:24:05.166+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "3 - create products"
+2023-09-23T11:24:05.167+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "4 - create notifications"
+2023-09-23T11:24:05.168+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "5 - create deliveries"
+2023-09-23T11:24:05.169+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "6 - create carts"
+2023-09-23T11:24:05.174+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "7 - create current prices"
+2023-09-23T11:24:05.175+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "8 - create cart contents"
+2023-09-23T11:24:05.177+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "9 - create delivery contents"
+2023-09-23T11:24:05.179+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "10 - create notifications associations"
+2023-09-23T11:24:05.181+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "11 - create price histories"
+2023-09-23T11:24:05.182+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "12 - insert customer"
+2023-09-23T11:24:05.183+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "13 - insert categories"
+2023-09-23T11:24:05.184+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "14 - insert product"
+2023-09-23T11:24:05.185+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "15 - insert delivery"
+2023-09-23T11:24:05.186+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "16 - insert cart"
+2023-09-23T11:24:05.187+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "17 - insert notification"
+2023-09-23T11:24:05.188+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "18 - insert cart contents"
+2023-09-23T11:24:05.188+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 18 migrations to schema "PUBLIC", now at version v18 (execution time 00:00.026s)
+2023-09-23T11:24:05.190+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully dropped pre-schema database level objects (execution time 00:00.000s)
+2023-09-23T11:24:05.191+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully cleaned schema "PUBLIC" (execution time 00:00.000s)
+2023-09-23T11:24:05.191+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully cleaned schema "PUBLIC" (execution time 00:00.000s)
+2023-09-23T11:24:05.191+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully dropped post-schema database level objects (execution time 00:00.000s)
+]]></system-out>
+  </testcase>
+  <testcase name="search_priceUpper" classname="au.edu.rmit.sept.supermarkets.products.Repositories.ProductRepositoryImplTest" time="0.03">
+    <system-out><![CDATA[2023-09-23T11:24:05.198+10:00  INFO 593 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2023-09-23T11:24:05.198+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 22 migrations (execution time 00:00.004s)
+2023-09-23T11:24:05.198+10:00  INFO 593 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-09-23T11:24:05.199+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-09-23T11:24:05.200+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create customers"
+2023-09-23T11:24:05.201+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - create categories"
+2023-09-23T11:24:05.202+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "3 - create products"
+2023-09-23T11:24:05.203+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "4 - create notifications"
+2023-09-23T11:24:05.204+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "5 - create deliveries"
+2023-09-23T11:24:05.205+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "6 - create carts"
+2023-09-23T11:24:05.206+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "7 - create current prices"
+2023-09-23T11:24:05.207+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "8 - create cart contents"
+2023-09-23T11:24:05.208+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "9 - create delivery contents"
+2023-09-23T11:24:05.209+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "10 - create notifications associations"
+2023-09-23T11:24:05.210+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "11 - create price histories"
+2023-09-23T11:24:05.211+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "12 - insert customer"
+2023-09-23T11:24:05.212+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "13 - insert categories"
+2023-09-23T11:24:05.213+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "14 - insert product"
+2023-09-23T11:24:05.214+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "15 - insert delivery"
+2023-09-23T11:24:05.216+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "16 - insert cart"
+2023-09-23T11:24:05.217+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "17 - insert notification"
+2023-09-23T11:24:05.218+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "18 - insert cart contents"
+2023-09-23T11:24:05.219+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 18 migrations to schema "PUBLIC", now at version v18 (execution time 00:00.019s)
+2023-09-23T11:24:05.220+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully dropped pre-schema database level objects (execution time 00:00.000s)
+2023-09-23T11:24:05.221+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully cleaned schema "PUBLIC" (execution time 00:00.000s)
+2023-09-23T11:24:05.222+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully cleaned schema "PUBLIC" (execution time 00:00.000s)
+2023-09-23T11:24:05.222+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully dropped post-schema database level objects (execution time 00:00.000s)
+]]></system-out>
+  </testcase>
+  <testcase name="search_supermarket" classname="au.edu.rmit.sept.supermarkets.products.Repositories.ProductRepositoryImplTest" time="0.059">
+    <system-out><![CDATA[2023-09-23T11:24:05.232+10:00  INFO 593 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2023-09-23T11:24:05.233+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 22 migrations (execution time 00:00.008s)
+2023-09-23T11:24:05.233+10:00  INFO 593 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-09-23T11:24:05.234+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-09-23T11:24:05.235+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create customers"
+2023-09-23T11:24:05.236+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - create categories"
+2023-09-23T11:24:05.238+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "3 - create products"
+2023-09-23T11:24:05.239+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "4 - create notifications"
+2023-09-23T11:24:05.240+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "5 - create deliveries"
+2023-09-23T11:24:05.241+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "6 - create carts"
+2023-09-23T11:24:05.242+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "7 - create current prices"
+2023-09-23T11:24:05.244+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "8 - create cart contents"
+2023-09-23T11:24:05.245+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "9 - create delivery contents"
+2023-09-23T11:24:05.250+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "10 - create notifications associations"
+2023-09-23T11:24:05.252+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "11 - create price histories"
+2023-09-23T11:24:05.254+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "12 - insert customer"
+2023-09-23T11:24:05.255+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "13 - insert categories"
+2023-09-23T11:24:05.255+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "14 - insert product"
+2023-09-23T11:24:05.256+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "15 - insert delivery"
+2023-09-23T11:24:05.257+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "16 - insert cart"
+2023-09-23T11:24:05.258+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "17 - insert notification"
+2023-09-23T11:24:05.259+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "18 - insert cart contents"
+2023-09-23T11:24:05.275+10:00  INFO 593 --- [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 18 migrations to schema "PUBLIC", now at version v18 (execution time 00:00.040s)
+2023-09-23T11:24:05.279+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully dropped pre-schema database level objects (execution time 00:00.000s)
+2023-09-23T11:24:05.281+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully cleaned schema "PUBLIC" (execution time 00:00.001s)
+2023-09-23T11:24:05.281+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully cleaned schema "PUBLIC" (execution time 00:00.000s)
+2023-09-23T11:24:05.281+10:00  INFO 593 --- [           main] o.f.c.i.command.clean.CleanExecutor      : Successfully dropped post-schema database level objects (execution time 00:00.000s)
+]]></system-out>
+  </testcase>
+</testsuite>
