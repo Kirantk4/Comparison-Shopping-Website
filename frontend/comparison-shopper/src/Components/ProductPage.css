@@ -1,0 +1,35 @@
+.block-display {
+  display:inline-block;
+  margin-right:auto;
+  margin-left:5px;
+}
+
+.product-display {
+  display:flex;
+  margin-top: 1rem;
+}
+.imageBorder {
+  display:block;
+  margin-left:2rem;
+  margin-right:auto;
+}
+
+.imageBorder img{
+  height:auto;
+  width:75%;
+  border: 2px solid black;
+  padding: 1.5rem;
+}
+.addToCart {
+  background-color: #17F12D;
+  border: 1px solid #17F12D;
+  border-radius: 24px;
+  padding: 1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom:1rem;
+}
+td {
+  padding:1.5rem;
+  text-align:left;
+}

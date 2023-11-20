@@ -1,0 +1,88 @@
+.companyTitle{
+    text-align: center;
+}
+
+.companyTitle p {
+    font-family: 'Sarabun', sans-serif;
+    font-size: 6rem;
+}
+
+.companyTitle span {
+    border-left: 5px #5498FF solid;
+    background-color: #2179FF;
+    color:white;
+    font-weight: bold;
+    padding:4px;
+}
+
+.footer {
+    
+    background-color: #5498FF;
+    padding:20px;
+}
+
+.outerBox{
+    display: flex;
+}
+
+.left {
+    margin-right:auto;
+    margin-left:2rem;
+}
+
+.centre{
+    position:center;
+    border: 5px;
+    width: 30%;
+    margin: auto;
+    padding: 5px;
+    top: 100%;
+    left: 50%;
+    transform: translate(-20%,-10%);
+}
+
+.button{
+    width: 100px;
+    display: block;
+    background-color: lightgray;
+    color: black;
+}
+.logoutButton{
+    width: 100px;
+    display: block;
+    background-color: lightgray;
+    color: red;
+}
+
+.favouriteItems{
+    background-color: #5498FF;
+    display: flex;
+    padding-left: 5px;
+}
+
+.notificationItems{
+    background-color: #5498FF;
+    display: flex;
+    padding-left: 5px;
+}
+
+
+.name{
+    background-color: gray;
+    display: flex;
+    padding-left: 5px;
+}
+
+.shops{
+    border: 2px solid black;
+    display: flex;
+    gap:5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    
+}
+
+.measurment{
+    margin-right:2rem;
+    margin-left:auto;
+}

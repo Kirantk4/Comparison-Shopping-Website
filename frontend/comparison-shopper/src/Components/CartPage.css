@@ -1,0 +1,74 @@
+table {
+    border-collapse: collapse; 
+}
+
+table tbody tr:not(:first-child) {
+    border-top: 2px solid black;
+}
+
+.removeBtn {
+    color: red;
+    text-decoration: underline;
+    background: none;
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+}
+
+.quantityInput {
+    width: 40px;
+    padding: 5px;
+    text-align: center;
+}
+
+.cartWrapper {
+    padding: 0 10%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.clearCartGroup {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.buttonsGroup {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.clearCart {
+    color: red;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 10px 20px;
+    font-size: 1.2em;
+}
+
+.continueBtn, .checkoutBtn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+}
+
+.continueBtn {
+    background-color: #5498FF;
+    color: white;
+}
+
+.checkoutBtn {
+    background-color: limegreen;
+    color: white;
+}
+
+.footer {
+    background-color: #5498FF;
+    padding: 20px;
+    margin-top: 40px;
+}
