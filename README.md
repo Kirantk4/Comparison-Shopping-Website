@@ -1,12 +1,11 @@
 # Web Application
 
 ## Quick run
+cd backend/products
+mvn spring-boot:run 
 
 cd frontend/comparison-shopper
 npm start
-
-cd backend/products
-mvn spring-boot:run 
 
 ## Code documentation 
 * Feature 1: User Login
